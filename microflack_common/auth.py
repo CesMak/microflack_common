@@ -12,7 +12,7 @@ import jwt
 
 from microflack_common.etcd import etcd_client
 
-token_auth = HTTPTokenAuth('Bearer')
+token_auth          = HTTPTokenAuth('Bearer')
 token_optional_auth = HTTPTokenAuth('Bearer')
 
 
