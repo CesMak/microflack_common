@@ -35,10 +35,7 @@ def _make_request(method, url, *args, **kwargs):
     raise_for_status = kwargs.pop('raise_for_status', False)
     response = getattr(_get_requests_session(), method.lower())(
         url, *args, **kwargs)
-    print(raise_for_status)
     if raise_for_status:
-        print(raise_for_status)
-        print("inside hereeeeee")
         response.raise_for_status()
     return response
 
