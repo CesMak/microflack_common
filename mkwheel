@@ -32,6 +32,8 @@ if [[ "$1" == "" ]]; then
 elif [[ "$1" == "all" ]]; then
     TAGS=$(git tag)
     for TAG in $TAGS; do
+        echo ""
+        echo -e "Build tag: $TAG"
         git checkout $TAG
         build
     done
